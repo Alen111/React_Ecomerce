@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;1,500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #fff;
+    color: #222;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+}
+
+.wrapper {
+    width: 1185px;
+    margin: 50px 50px;
+}
+header{
+    position: relative;
+}
+
+header .logo {
+    font-weight: 600;
+    font-size: 20px;
+}
+
+header ul.nav {
+    float: right;
+    list-style: none;
+}
+
+header ul.nav li {
+    display: inline;
+    margin-left: 25px;
+    cursor: pointer;
+    transition: opacity 500ms ease;
+}
+
+header ul.nav li:hover {
+    opacity: 0.5;
+    color: #84aab6;
+}
+
+header .presentation {
+    margin: 50px 0;
+    background: url('./img/cov.jpeg') no-repeat;
+    width: 100%;
+    height: 500px;
+    background-size: cover;
+    background-position: center center;
+    background-blend-mode: multiply;
+    background-color: #F0F8FF;
+}
+
+header .presentation:after {
+    content: 'Лучшие варианты для вас';
+    position: absolute;
+    top: 150px;
+    left: 100px;
+    width: 300px;
+    font-size: 40px;
+    font-weight: 600;
+    color: #f2f2f2;
+}
+
+header .presentation:before {
+    content: 'По низким ценам';
+    position: absolute;
+    top: 300px;
+    left: 100px;
+    width: 300px;
+    font-size: 17px;
+    font-weight: 600;
+    color: #355869;
+}
+
+header .icon{
+    float:right;
+    cursor: pointer;
+    transition: color, transform 500ms ease;
+}
+
+
+header .icon:hover,
+header .icon.active{
+    color: #84aab6;
+    transform: scale(1.5);
+}
+
+header .shop-card{
+    position: absolute;
+    top: 30px;
+    right: 0;
+    width: 450px;
+    min-height: 100px;
+    background: #fafafa;
+    webkit-box-shadow: 5px 5px 15px -1px #000000;
+    box-shadow: 5px 5px 15px -1px #000000;
+    z-index: 1000;
+    padding: 20px 20px 0;
+}
+
+header .shop-card .item{
+    width: 100%;
+    float: left;
+    margin-bottom: 5px;
+
+}
+
+header .shop-card .item .delete{
+    color: #ca5252;
+    float: right;
+    position: relative;
+    top: -35px;
+    cursor: pointer;
+    transition: color, transform 500ms ease;
+}
+
+header .shop-card .item .delete:hover{
+    color: #d83030;
+    transform: scale(1.5);
+}
+
+header .shop-card .empty h2{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+header .shop-card .item img{
+    width: 90px;
+    float: left;
+    margin-right: 20px;
+
+}
+
+header .shop-card .item h2{
+    font-size: 20px;
+}
+header .shop-card .item p {
+    color: #797979;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+header .shop-card .summa{
+    float: left;
+    width: 100%;
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.categories div{
+    display: inline-block;
+    background: #f2f2f2;
+    border-radius: 50px;
+    padding: 10px 20px;
+    margin-right: 15px;
+    font-size: 15px;
+    cursor:pointer;
+    border: 1px solid transparent;
+    transition: all 500ms ease;
+}
+
+.categories div:hover{
+    border-color: silver;
+    transform: scale(1.05);
+}
+
+.full-item{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:rgb(0, 0, 0, 0.8);
+    z-index: 9999;
+    overflow: auto;
+}
+.full-item > div{
+    width: 500px;
+    position: relative;
+    margin: 10% auto;
+    padding: 40px 30px;
+    background: #fff;
+    border-radius: 9px;
+}
+
+main {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+
+main .item {
+    margin-top: 120px;
+    background: #f5f5f5;
+    overflow: hidden;
+    position: relative;
+}
+
+main .item img,
+.full-item img{
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+    transition: transform 500ms ease;
+    cursor: pointer;
+}
+
+main .item img:hover {
+    transform: scale(1.05);
+}
+
+main h2, .full-item h2,
+main p, .full-item p,
+main b .full-item b{
+    margin:5px 15px;
+    color: #333;
+}
+
+main b, .full-item b{
+    color: #5fa36a;
+    padding: 16px;
+}
+
+main .add-to-card,
+.full-item .add-to-card{
+    position: absolute;
+    right: 7px;
+    bottom: 7px;
+    background: #ca5252;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    color: white;
+    border-radius: 50%;
+    cursor: pointer;
+    font-weight: 600;
+    transition: transform 500ms ease;
+
+}
+
+main .add-to-card:hover,
+.full-item .add-to-card:hover{
+    transform: scale(1.05) translateY(-5px);
+
+}
+
+footer {
+    text-align: center;
+    margin-top: 100px;
+}
